@@ -30,4 +30,45 @@ $(document).ready(function(){
     }
     toggleClass("a.catalog-item__link")
     toggleClass("a.catalog-item__back")
-  });
+
+    //modal
+
+    $("[data-modal=consultation]").on("click", function(){
+        $(".overlay, #consultation").fadeIn();
+    
+    });
+    $(".modal__close").on("click", function(){
+        $(".overlay, #consultation, #order, #thanks").fadeOut();
+    });
+    $(".catalog-item_btn").each(function(i){
+        $(this).on("click", function(){
+            $("#order .modal__subtitle").text($(".catalog-item__subtitle").eq(i).text());
+            $(".overlay, #order").fadeIn();
+        })
+    });
+    function modalValidate(classValid){
+        $(classValid).validate({
+            rules: {
+                name: "required",
+                email: {
+                    required: true,
+                    email: true
+                },
+                phone: "required",
+                onfocusout: true
+            },
+            messages: {
+                name: "Введите своё имя",
+                email: {
+                  required: "После с email должно быть заполнено!",
+                  email: "Ваш email должен быть в формате name@domain.com!"
+                },
+                phone: "Введите номер телефона, иначе мы не сможем с вами связаться!"
+            }
+        });
+    };
+    modalValidate("#consultation-form");
+    modalValidate("#consultation form");
+    modalValidate("#order form");
+    $("input[name=phone]").mask("+7 (999) 999-99 99");
+});
