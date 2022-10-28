@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <div class="promo">
+    <div id="up" class="promo">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -46,7 +47,7 @@
                 <button data-modal="consultation" class="button button_main">заказать кОНСУЛЬТАЦИЮ</button>
                 <div class="promo__link">
                     или
-                    <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a>
+                    <a href="#catalogsection">ПЕРЕЙТИ В КАТАЛОГ</a>
                 </div>
             </div>
         </div>
@@ -61,7 +62,7 @@
                     <div class="advantage__item-text">Наши сотрудники всегда готовы поделиться своим опытом, так как сами бегают полумарафоны, переплыли Босфор, готовятся к соревнованиям по триатлону!</div>
                 </div>
                 <div class="advantage__item">
-                    <img src="icons/heart.png" alt="">
+                    <img class="heartbeat_animation" src="icons/heart.png" alt="">
                     <div class="advantage__item-header">Заботимся о здоровье</div>
                     <div class="advantage__item-text">Мы работаем для того, чтобы Ваши занятия спортом шли на пользу Вашему здоровью и были в радость Вам и Вашим близким!</div>
                 </div>
@@ -85,7 +86,7 @@
             </form>
         </div>
     </section>
-    <section class="carousel">
+    <div class="carousel">
         <div class="container">
             <div class="carousel__inner">
                 <div>
@@ -99,8 +100,8 @@
                 </div>
               </div>
         </div>
-    </section>
-    <section class="catalog">
+    </div>
+    <section id="catalogsection" class="catalog">
         <div class="container">
             <h2 class="title catalog_title">Каталог пульсометров</h2>
             <ul class="catalog__tabs">
@@ -354,7 +355,7 @@
         <div class="container">
             <h2 class="title review__title">отзывы клиентов</h2>
             <div class="review__wrapper">
-                <div class="review-item">
+                <div data-wow-delay=".5s" class="review-item animate__animated animate__fadeInUp wow">
                     <img src="img/irina.jpg" alt="" class="review-item__img">
                     <div class="review-item__wrapper-text">
                         <div class="review-item__title">Ирина Иванченко</div>
@@ -362,7 +363,7 @@
                         <div class="review-item__text">Не знала, что себе купить - обратилась к ребятам из RunSmart - подобрали пульсометр, который подошёл именно под мои цели и финансовые возможности.<br>Через некоторое время решила обновить гаджет - не раздумывая обратилась туда же.<br><br>Новые цели - новый гаджет!<br>Спасибо, RunSmart!</div>
                     </div>
                 </div>
-                <div class="review-item">
+                <div data-wow-delay=".5s" class="review-item animate__animated animate__fadeInUp wow">
                     <img src="img/ivan.jpg" alt="" class="review-item__img">
                     <div class="review-item__wrapper-text">
                         <div class="review-item__title">Иван Сёмочкин</div>
@@ -370,7 +371,7 @@
                         <div class="review-item__text">Крутая штука-пульсометр. Обычно без них бегал. Оказывается только хуже себе делал.<br>Купил пульсометр, ещё в подарок получил тренировку. Со мной вместе провели первую тренировку, научили пользоваться новым гаджетом. Также объяснили основы анатомии, составили план тренировок на месяц вперёд.<br><br>С ними подготовился к своему первому полумарафону! Спасибо!!!</div>
                     </div>
                 </div>
-                <div class="review-item">
+                <div data-wow-delay=".5s" class="review-item animate__animated animate__fadeInUp wow">
                     <img src="img/julia.jpg" alt="" class="review-item__img">
                     <div class="review-item__wrapper-text">
                         <div class="review-item__title">Юлия Дашкина</div>
@@ -427,16 +428,19 @@
             <div class="modal__subtitle">Наш менеджер свяжется с вами в ближайшее время!</div>
         </div>
     </div>
+    <a href="#up" class="pageup">
+        <i class="fa-solid fa-circle-up"></i>
+    </a>
 
 
 
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="https://kit.fontawesome.com/53ed77ac6f.js" crossorigin="anonymous"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
